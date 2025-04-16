@@ -8,6 +8,12 @@ function submitForm() {
         email: email,
         age: age
     };
+    console.log(jsonData);
 
-    document.getElementById('jsonOutput').textContent = JSON.stringify(jsonData, null, 2);
+    localStorage.setItem('formData', JSON.stringify(jsonData));
+    alert('Form submitted successfully!');
+
+    window.location.href = "./home.html"
+
+    // document.getElementById('jsonOutput').textContent = JSON.stringify(jsonData, null, 2);
 }
